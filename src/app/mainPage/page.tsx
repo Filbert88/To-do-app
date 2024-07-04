@@ -32,7 +32,7 @@ export default function MainPage() {
       setNewTask({title: "",
         description: "",
         duedate: ""})
-      refetch();
+      void refetch(); // use void to ignore promise
     },
     onError: () => {
       toast({
@@ -47,7 +47,7 @@ export default function MainPage() {
         toast({
           title: "Task marked as completed",
         });
-        refetch();
+        void refetch();
       },
       onError: () => {
         toast({
@@ -64,7 +64,7 @@ export default function MainPage() {
         toast({
           title: "Task marked as not completed",
         });
-        refetch();
+        void refetch();
       },
       onError: () => {
         toast({
@@ -81,7 +81,7 @@ export default function MainPage() {
       toast({
         title: "Task deleted successfully",
       });
-      refetch();
+      void refetch();
     },
     onError: () => {
       toast({

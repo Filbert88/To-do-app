@@ -1,5 +1,13 @@
 import { z } from "zod";
 import { createTRPCRouter, publicProcedure } from "../trpc";
+import { Prisma } from "@prisma/client";
+
+interface TaskWhereClause extends Prisma.TaskWhereInput {
+  OR?: [
+    { title: Prisma.StringFilter },
+    { description: Prisma.StringFilter }
+  ];
+}
 
 export const taskRouter = createTRPCRouter({
   // Fetch task with filter
@@ -15,7 +23,7 @@ export const taskRouter = createTRPCRouter({
     .query(async ({ ctx, input }) => {
       const { limit, offset, search, filter } = input;
 
-      const where: any = {
+      const where: TaskWhereClause = {
         OR: [
           { title: { contains: search, mode: "insensitive" } },
           { description: { contains: search, mode: "insensitive" } },
