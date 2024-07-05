@@ -23,6 +23,8 @@ export default function MainPage() {
     filter,
   });
 
+  console.log("tes",tasks);
+
   const addTaskMutation = api.task.addTask.useMutation({
     onSuccess: () => {
       toast({

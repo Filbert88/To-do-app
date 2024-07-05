@@ -1,7 +1,6 @@
 import { z } from "zod";
 import { createTRPCRouter, publicProcedure } from "../trpc";
 import { Prisma } from "@prisma/client";
-
 interface TaskWhereClause extends Prisma.TaskWhereInput {
   OR?: [
     { title: Prisma.StringFilter },
