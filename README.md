@@ -1,29 +1,67 @@
-# Create T3 App
+# To-Do List App
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+This is a simple To-Do List app built using NextJs, Prisma, tRPC and Shadcn UI. The app allows users to add and delete tasks, sort tasks by date and completion status, and filter tasks by their completion status.
 
-## What's next? How do I make an app with this?
+## Features
 
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
+- **Add Task**: Users can add new tasks with a title and a due date.
+- **Delete Task**: Users can delete existing tasks.
+- **Sort Tasks**: Tasks are automatically sorted by their due date and completion status.
+- **Filter Tasks**: Users can filter tasks to show only completed or uncompleted tasks.
+- **Responsive design**
 
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+## Prerequisites
 
-- [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
-- [Prisma](https://prisma.io)
-- [Drizzle](https://orm.drizzle.team)
-- [Tailwind CSS](https://tailwindcss.com)
-- [tRPC](https://trpc.io)
+Before you begin, ensure you have met the following requirements:
+- Node.js (v14.x or later)
+- npm (v6.x or later) or yarn (v1.x or later)
+- PostgreSQL (or any other database supported by Prisma)
 
-## Learn More
+## Tech Stack
+- Next.js: React framework for server-side rendering and static site generation, providing a powerful toolkit for building performant web applications.
+- Prisma: Next-generation ORM for database access, making it easy to work with databases in a type-safe manner.
+- tRPC: End-to-end typesafe APIs, allowing you to create robust and type-safe API layers between your client and server.
+- TypeScript: Static type-checking, enhancing code quality and developer productivity with types and interfaces.
+- Shadcn UI: A modern UI component library for React, offering a set of customizable and accessible components to speed up the development of beautiful and responsive user interfaces.
 
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
+## Getting Started
 
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
+Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.
 
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
+### Installation
 
-## How do I deploy this?
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/Filbert88/To-do-app.git
+    ```
+2. **Navigate to the project directory**:
+    ```bash
+    cd to-do-app
+    ```
+3. **setup .env file and add your database URL**:
+    ```bash
+   DATABASE_URL="postgresql://JohnDoe:password@localhost:5432/defaultdb"
+    ```
+4. **Generate Prisma Client**:
+    ```bash
+   npm run postinstall
+    ```
+5. **Migrate the database**:
+    ```bash
+   npm run db:generate
+    ```
+6. **Run the server**:
+    ```bash
+   npm run dev
+    ```
 
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+## Try the app
+you can try the app that already hosted on vercel in https://to-do-app-ez.vercel.app/ 
+
+## Deployment
+This project is deployed on vercel. Before deploying, remember to add your database url on the environment variables. To learn more about vercel, you can view the documentation at [Vercel](https://create.t3.gg/en/deployment/vercel)
+
+## Links
+- Repository : https://github.com/Filbert88/To-do-app
+- Website Link : https://to-do-app-ez.vercel.app/
+
