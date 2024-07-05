@@ -17,6 +17,7 @@
     "seed": "node --loader ts-node/esm prisma/seed.ts"
   },
   "dependencies": {
+    "@next/font": "^14.2.4",
     "@prisma/client": "^5.14.0",
     "@radix-ui/react-toast": "^1.2.1",
     "@t3-oss/env-nextjs": "^0.10.1",

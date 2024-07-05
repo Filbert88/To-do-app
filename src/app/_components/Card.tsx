@@ -15,11 +15,11 @@ const Card: React.FC<CardProps> = ({ task, onComplete, onUncomplete, onDelete })
   return (
     <div className="w-full">
       <div className={`mb-2 rounded p-4 ${isOverdue ? 'border-2 border-red-500' : 'bg-[#3A3C48]'}`}>
-        <h2 className="text-2xl font-bold text-white">{task.title}</h2>
+        <h2 className="text-2xl font-bold text-white capitalize">{task.title}</h2>
         <p className="line-clamp-2 text-white">{task.description}</p>
         <p className="text-sm text-gray-300">Due: {task.duedate ? new Date(task.duedate).toLocaleDateString() : 'No Due Date'}</p>
-        {isOverdue && <p className="text-red-500">Past Due</p>}
-        <div className="mt-2 flex gap-4">
+        {isOverdue && <p className="text-red-500">Past Due Already</p>}
+        <div className="mt-3 flex gap-4">
           {task.isDone ? (
             <button className="rounded bg-custom-red p-2 text-white" onClick={onUncomplete}>
               Mark as Undone

@@ -1,7 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 
 export function middleware(req: NextRequest) {
-  console.log("oi cibaii")
   console.log('Middleware triggered for', req.url);
   if (req.method === 'OPTIONS') {
     const headers = new Headers();
